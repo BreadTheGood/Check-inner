@@ -11,12 +11,23 @@ int handLug = 0;
 int dog = 0;
 // variables de equipaje
 int quantityCarryOnBagagge = 0;
-int weightEconomic = 0;
-int weightExecutive = 0;
-int weightFirstClass = 0;
+int weightHandLug = 0;
+
 // variables perro de servicio.
 string dogAllowed;
 string dogSeatBelt;
+
+Random rnd = new Random();
+int num1 = rnd.Next(1, 9);
+int num2 = rnd.Next(1, 9);
+int num3 = rnd.Next(1, 9);
+int num4 = rnd.Next(1, 9);
+int num5 = rnd.Next(1, 9);
+
+char letra1 = (char)rnd.Next('A','Z'+ 1);
+char letra2 = (char)rnd.Next('A','Z'+ 1);
+
+
 
 
 
@@ -107,6 +118,8 @@ else if (age >= 5 && age<=11)
 }
 
 //equipaje
+
+// mensaje de equipaje va en el ticket final
 if (baggage == 1)
 {
     Console.WriteLine("\nIngrese cuanto equipaje de mano que va a llevar");
@@ -121,25 +134,30 @@ if (baggage == 1)
         Console.ReadLine();
     }
 }
-else
-{
-}
+
 
 
 //equipaje facturado
+
+// cambiar structura de switch a if, validando handLug y luego FightClass para pedir datos
+if (handLug == 0)
+{
+
+}
 if (flightClass == 1)
 {
+    Console.WriteLine("No posee equipaje facturado");
+    Console.WriteLine("\nIngrese el peso de su equipaje");
+    weightHandLug = int.Parse(Console.ReadLine());
     switch (handLug)
     {
         case 0:
 
-            Console.WriteLine("No posee equipaje facturado");
-            Console.WriteLine("\nIngrese el peso de su equipaje");
-            weightEconomic = int.Parse(Console.ReadLine());
-            if (weightEconomic > 5)
+            
+            if (weightHandLug > 5)
             {
-                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equipaje se excede por: {(weightEconomic - 5)}kg , el límite permitido es de 5kg en clase economica.");
-                Console.WriteLine($"\nExcedente a pagar: ${(weightEconomic * 10)}");
+                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equipaje se excede por: {(weightHandLug - 5)}kg , el límite permitido es de 5kg en clase economica.");
+                Console.WriteLine($"\nExcedente a pagar: ${(weightHandLug * 10)}");
             }
             break;
 
@@ -154,11 +172,11 @@ else if (flightClass == 2)
         case 0:
             Console.WriteLine("No posee equipaje facturado");
             Console.WriteLine("Ingrese el peso de su equipaje");
-            weightExecutive = int.Parse(Console.ReadLine());
-            if (weightExecutive > 10)
+            weightHandLug = int.Parse(Console.ReadLine());
+            if (weightHandLug > 10)
             {
-                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equpiaje se excede por: {(weightExecutive - 10)}kg , el límite permitido es de 10kg en clase ejecutiva.");
-                Console.WriteLine($"\nExcedente a pagar: ${(weightExecutive * 10)}");
+                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equpiaje se excede por: {(weightHandLug - 10)}kg , el límite permitido es de 10kg en clase ejecutiva.");
+                Console.WriteLine($"\nExcedente a pagar: ${(weightHandLug * 10)}");
             }
             break;
         default:
@@ -172,11 +190,11 @@ else
         case 0:
             Console.WriteLine("No posee equipaje facturado");
             Console.WriteLine("Ingrese el peso de su equipaje");
-            weightFirstClass = int.Parse(Console.ReadLine());
-            if (weightFirstClass > 20)
+            weightHandLug = int.Parse(Console.ReadLine());
+            if (weightHandLug > 20)
             {
-                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equpiaje se excede por: {(weightFirstClass - 20)}kg , el límite permitido es de 10kg en clase ejecutiva.");
-                Console.WriteLine($"\nExcedente a pagar: ${(weightFirstClass * 10)}");
+                Console.WriteLine($"\nEl peso de su equipaje excede el límite permitido, su equpiaje se excede por: {(weightHandLug - 20)}kg , el límite permitido es de 10kg en primera clase.");
+                Console.WriteLine($"\nExcedente a pagar: ${(weightHandLug * 10)}");
             }
             break;
         default:
@@ -201,11 +219,29 @@ if (dog == 1)
         Console.WriteLine("Disculpe! pero el perro debe contar con su chaleco o distintivo de servicio y la correa para asegurarlo al cinturon de seguridad.");
     }
 
-    
+
 }
-else 
-{
-}
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
+
+Console.WriteLine("////////////////////////////////////////////////////////////////");
+
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine($"\nPasajero: {name} | DNI: {dni} | Edad: {age}" );
+Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass}");
+Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} | Equipaje en bodega: {weightHandLug} | Excedente a pagar: {(weightHandLug * 10)}");
+/*Console.WriteLine($"\nPerro de acompañamiento: {Perro}");
+Console.WriteLine($"\nExcedente en equipaje: {excedente}");*/
+
+Console.WriteLine($"\n||||| Numero de tarjeta: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} |||||");
+Console.WriteLine("\n================================================================");
+Console.WriteLine($"Feliz viaje a {dest}, Vuelve pronto {name}!!!");
+Console.WriteLine("================================================================");
+
+Console.ForegroundColor = ConsoleColor.DarkMagenta;
+Console.WriteLine("\n////////////////////////////////////////////////////////////////");
+
+
+
 
 
 Console.ResetColor();
