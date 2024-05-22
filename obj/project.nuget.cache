@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6BmJgrzvoBXCxoa6mDywQojY3vzBoRt/uqnrwlWZCm3fuNh5xkum3mjfFyjO8I1YomIyBMmwOvYNLfxeC5Mw/g==",
+  "dgSpecHash": "hh3nVgCfy73sqfmv+dk09snqtSQysOkJsujwQcCV1UREAJmmaZs61YZ4tjy6F1UrlcG2MBt7ndwdCAoED+1Cmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alumno\\Source\\Repos\\check-inner\\ConsoleApp9.csproj",
+  "projectFilePath": "/home/runner/Check-inner/ConsoleApp9.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,14 @@
+/home/runner/Check-inner/bin/Debug/net7.0/ConsoleApp9
+/home/runner/Check-inner/bin/Debug/net7.0/ConsoleApp9.deps.json
+/home/runner/Check-inner/bin/Debug/net7.0/ConsoleApp9.runtimeconfig.json
+/home/runner/Check-inner/bin/Debug/net7.0/ConsoleApp9.dll
+/home/runner/Check-inner/bin/Debug/net7.0/ConsoleApp9.pdb
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.AssemblyInfoInputs.cache
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.AssemblyInfo.cs
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.csproj.CoreCompileInputs.cache
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.dll
+/home/runner/Check-inner/obj/Debug/net7.0/refint/ConsoleApp9.dll
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.pdb
+/home/runner/Check-inner/obj/Debug/net7.0/ConsoleApp9.genruntimeconfig.cache
+/home/runner/Check-inner/obj/Debug/net7.0/ref/ConsoleApp9.dll

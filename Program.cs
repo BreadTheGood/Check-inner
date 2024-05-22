@@ -81,10 +81,6 @@ handLug = int.Parse(Console.ReadLine());
 Console.WriteLine("\nViaja con un perro de servicio? [Si: 1, No: 0]");
 dog = int.Parse(Console.ReadLine());
 
-
-Console.WriteLine("\n\n\n\nGracias por ingresar sus datos!");
-Console.WriteLine("Calculando los datos ingresados...\n\n\n\n");
-
 Console.ReadLine();
 
 
