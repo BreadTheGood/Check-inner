@@ -90,7 +90,7 @@ if (baggage == 1)
 }
 
 Console.WriteLine("\nY . . . Tu equipaje en bodega ya esta facturado? [Si: 1, No: 0]: ");
-Console.WriteLine("Recuerda responder con números!")
+Console.WriteLine("Recuerda responder con números!");
 handLug = int.Parse(Console.ReadLine());
                 
 if (handLug==0)
