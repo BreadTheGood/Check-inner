@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "hh3nVgCfy73sqfmv+dk09snqtSQysOkJsujwQcCV1UREAJmmaZs61YZ4tjy6F1UrlcG2MBt7ndwdCAoED+1Cmg==",
+  "dgSpecHash": "fWLWlw7mq48dq/n/l5YyqRs/Ot8oEYg1zXli0WhdqZt2qlv3gcjYkQCZklYZsB132gdhzWROemyKE2bKkPk7mg==",
   "success": true,
-  "projectFilePath": "/home/runner/Check-inner/ConsoleApp9.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\santi\\source\\repos\\Check-inner\\ConsoleApp9.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.19\\microsoft.netcore.app.host.win-x64.7.0.19.nupkg.sha512"
+  ],
   "logs": []
 }
