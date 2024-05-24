@@ -71,7 +71,7 @@ dest = Console.ReadLine();
 Console.WriteLine($"\nMe gusta {dest}, buena elección!");
 
 Console.WriteLine("\nTe consulto ¿Vuelas en clase económica: 1, ejecutiva: 2 o Primera Clase: 3?");
-Console.WriteLine("\Responde solo con números");
+Console.WriteLine("\nResponde solo con números");
 flightClass = int.Parse(Console.ReadLine());
 
 //Datos de Equipaje
