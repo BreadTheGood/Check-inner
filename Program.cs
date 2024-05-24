@@ -68,19 +68,19 @@ age = int.Parse(Console.ReadLine());
 Console.WriteLine($"Okey, {name}");
 Console.WriteLine("¿A que ciudad viajas?");
 dest = Console.ReadLine();
-Console.WriteLine("\nMe gusta {dest}, buena elección!");
+Console.WriteLine($"\nMe gusta {dest}, buena elección!");
 
-Console.WriteLine("Te consulto ¿Vuelas en clase económica: 1, ejecutiva: 2 o Primera Clase: 3?");
-Console.WriteLine("Responde solo con números");
+Console.WriteLine("\nTe consulto ¿Vuelas en clase económica: 1, ejecutiva: 2 o Primera Clase: 3?");
+Console.WriteLine("\Responde solo con números");
 flightClass = int.Parse(Console.ReadLine());
 
 //Datos de Equipaje
-Console.WriteLine("Bien!");
+Console.WriteLine("\nBien!");
 Console.WriteLine("\n Otra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
 baggage = int.Parse(Console.ReadLine());
 if (baggage == 1)
 {
-    Console.WriteLine("¿Cuanto equipaje de mano llevas?");
+    Console.WriteLine("\n¿Cuanto equipaje de mano llevas?");
     quantityCarryOnBagagge = int.Parse(Console.ReadLine());
     if (quantityCarryOnBagagge > 3)
     {
@@ -90,12 +90,12 @@ if (baggage == 1)
 }
 
 Console.WriteLine("\nY . . . Tu equipaje en bodega ya esta facturado? [Si: 1, No: 0]: ");
-Console.WriteLine("Recuerda responder con números!");
+Console.WriteLine("\nRecuerda responder con números!");
 handLug = int.Parse(Console.ReadLine());
                 
 if (handLug==0)
 {    
-    Console.WriteLine("¿Cuanto pesa de tu equipaje?");
+    Console.WriteLine("\n¿Cuanto pesa de tu equipaje?");
     switch (flightClass){
         case 1:             
             weightHandLug = int.Parse(Console.ReadLine());
