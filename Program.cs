@@ -76,7 +76,7 @@ flightClass = int.Parse(Console.ReadLine());
 
 //Datos de Equipaje
 Console.WriteLine("\nBien!");
-Console.WriteLine("\n Otra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
+Console.WriteLine("\nOtra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
 baggage = int.Parse(Console.ReadLine());
 if (baggage == 1)
 {
@@ -94,8 +94,9 @@ Console.WriteLine("\nRecuerda responder con números!");
 handLug = int.Parse(Console.ReadLine());
                 
 if (handLug==0)
-{    
-    Console.WriteLine("\n¿Cuanto pesa de tu equipaje?");
+{   
+    Console.WriteLine("\nOk! Te ayudaré a facturarlo!");
+    Console.WriteLine("\n¿Cuantos Kilos pesa de tu equipaje?");
     switch (flightClass){
         case 1:             
             weightHandLug = int.Parse(Console.ReadLine());
@@ -122,44 +123,18 @@ if (handLug==0)
             break;
         }
 }
+Console.WriteLine("Listo!");
 
-Console.WriteLine("\nViajas con un perro de servicio? [Si: 1, No: 0]");
+Console.WriteLine("\n{name}, viajas con un perro de servicio? [Si: 1, No: 0]");
 dog = int.Parse(Console.ReadLine());
-
-
-//validacion de edad
-if (age < 18)
-{
-    if (age >= 2 && age < 5)
-    {
-        Console.WriteLine("La persona debera viajar obligatoriamente acompañado por sus padres o tutor en la misma cabina y en asiento contiguos");
-        Console.WriteLine("Por favor ingresa el DNI de tu acompañante mayor de edad");
-        dniAcompañante = Console.ReadLine();
-    }else if (age >= 5 && age <= 11)
-    {
-    int servicioMenorNoAcompañado = 0;
-
-    Console.WriteLine("La persona podra viajar solo al momento del inicio del viaje, solicitando el Servicio de Menor No Acompañado");
-    Console.WriteLine("¿Deseas solicitar el servicio de menor no acompañado?");
-    Console.WriteLine("Responde con números! Si:1, No:2");
-    servicioMenorNoAcompañado = int.Parse(Console.ReadLine()); 
-    Console.WriteLine("Muy bien!");
-    
-    if (servicioMenorNoAcompañado < 2)
-    {
-        Console.WriteLine("Por favor ingresa el DNI de tu acompañante mayor de edad");
-        dniAcompañante = Console.ReadLine();
-    }
-
-} 
-}
-
 if (dog == 1)
 {
-    Console.WriteLine("\n\n\nEl perro con el que viaja esta debidamente identificado con su chaleco o distintivo de servicio? [Si: 1, No: 0]:");
+    Console.WriteLine("\nContame");
+    Console.WriteLine("\n¿Tu perro esta identificado con su chaleco o distintivo de servicio? [Si: 1, No: 0]:");
     dogAllowed = int.Parse(Console.ReadLine());
-    Console.WriteLine("\nEl perro cuenta con un accesorio o correa para asegurarlo al cinturón de seguridad? [Si: 1, No: 0]:");
+    Console.WriteLine("\n Y cuenta con un accesorio o correa para asegurarlo al cinturón de seguridad? [Si: 1, No: 0]:");
     dogSeatBelt = int.Parse(Console.ReadLine());
+    
     if (dogAllowed == 1 && dogSeatBelt == 1)
     {
         permittedDog = dogAllowed & dogSeatBelt;
@@ -172,7 +147,36 @@ if (dog == 1)
 
 }
 
+Console.WriteLine("\nAnotado!");
 
+
+//validacion de edad
+if (age < 18)
+{
+    if (age >= 2 && age < 5)
+    {
+        Console.WriteLine("\nTe comento {name}, debes viajar obligatoriamente acompañado por tus padres o tutor en la misma cabina y en asiento contiguos");
+        Console.WriteLine("\nSolo hace falta que me digas el DNI de tu acompañante mayor de edad");
+        dniAcompañante = Console.ReadLine();
+    }else if (age >= 5 && age <= 11)
+    {
+    int servicioMenorNoAcompañado = 0;
+
+    Console.WriteLine("\nTe comento{name}, si quieres viajar solicitando el Servicio de Menor No Acompañado presiona 1, y sino presiona 2");
+    servicioMenorNoAcompañado = int.Parse(Console.ReadLine()); 
+    Console.WriteLine("Muy bien!");
+    
+    if (servicioMenorNoAcompañado < 2)
+    {
+        Console.WriteLine("\nSolo hace falta que me digas el DNI de tu acompañante mayor de edad");
+        dniAcompañante = Console.ReadLine();
+    }
+
+} 
+}
+
+Console.WriteLine("\n Ya estamos listos! Presiona ENTER para imprimir tu boleto de embarque!");
+Console.ReadLine();
 
 Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
@@ -195,7 +199,12 @@ else
     Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass} = [Primera Clase]");
 }
 
-Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg | Excedente a pagar por equipaje en bodega: ${(weightHandLug * 10)}");
+Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg )
+                  
+Console.ForegroundColor = ConsoleColor.Red;
+Console.WriteLine($"Excedente a pagar por equipaje en bodega: {(weightHandLug * 10)}");
+                  
+Console.ForegroundColor = ConsoleColor.Cyan;
 
 if (permittedDog == 1)
 {
@@ -207,7 +216,7 @@ else if (dog == 0)
 }
 else
 {
-    Console.WriteLine($"\nDisculpe! pero el perro debe contar con su chaleco o distintivo de servicio y la correa para asegurarlo al cinturon de seguridad para poder abordar con el pasajero, {name}");
+    Console.WriteLine($"\n Al abordar, le daremos a tu perro un distintivo de servicio y la correa para asegurarlo al cinturon de seguridad");
 }
 
 
