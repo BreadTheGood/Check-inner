@@ -128,9 +128,7 @@ if (baggage == 1)
     }
     else
     {
-        Console.WriteLine("Perfecto!\n usted no excede la cantidad de equipaje permitido.\n\n");
-        Console.ReadLine();
-
+        Console.WriteLine("\n\n\nPerfecto! Usted no excede la cantidad de equipaje permitido.");
     }
 }
 
@@ -156,7 +154,7 @@ if (handLug == 0)
     else if (flightClass == 2)
     {
 
-        Console.WriteLine("\n\n\nNo posee equipaje facturado");
+        Console.Write("\n\n\nNo posee equipaje facturado, ");
         Console.WriteLine("Ingrese el peso de su equipaje");
         weightHandLug = int.Parse(Console.ReadLine());
         if (weightHandLug > 10)
@@ -168,7 +166,7 @@ if (handLug == 0)
     else
     {
 
-        Console.WriteLine("\n\n\nNo posee equipaje facturado");
+        Console.Write("\n\n\nNo posee equipaje facturado, ");
         Console.WriteLine("Ingrese el peso de su equipaje");
         weightHandLug = int.Parse(Console.ReadLine());
         if (weightHandLug > 20)
@@ -201,7 +199,6 @@ if (dog == 1)
 
 
 
-
 Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
 Console.WriteLine("\n////////////////////////////////////////////////////////////////");
@@ -223,29 +220,21 @@ else
     Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass} = [Primera Clase]");
 }
 
-Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Equipaje en bodega: {weightHandLug}kg | Excedente a pagar por equipaje en bodega: ${(weightHandLug * 10)}");
+Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg | Excedente a pagar por equipaje en bodega: ${(weightHandLug * 10)}");
 
 if (permittedDog == 1)
 {
     Console.WriteLine($"\nPerro de acompañamiento: {permittedDog}, perro permitido para abordar con el pasajero, {name}");
+}
+else if (dog == 0)
+{
+    Console.WriteLine("\nUsted viaja sin perro de acompañamiento");
 }
 else
 {
     Console.WriteLine($"\nDisculpe! pero el perro debe contar con su chaleco o distintivo de servicio y la correa para asegurarlo al cinturon de seguridad para poder abordar con el pasajero, {name}");
 }
 
-if (flightClass == 1 && weightHandLug > 5)
-{
-    Console.WriteLine($"\nExcedente en equipaje: {handLugOverweight}kg, su equipaje se excede por: {(weightHandLug - 5)}kg , el límite permitido es de 5kg en clase Económica.");
-}
-else if (flightClass == 1 && weightHandLug > 10)
-{
-    Console.WriteLine($"\nExcedente en equipaje: {handLugOverweight}kg, su equipaje se excede por: {(weightHandLug - 10)}kg , el límite permitido es de 10kg en clase Ejecutiva.");
-}
-else
-{
-    Console.WriteLine($"\nExcedente en equipaje: {handLugOverweight}kg, su equipaje se excede por: {(weightHandLug - 20)}kg , el límite permitido es de 20kg en Primera Clase.");
-}
 
 Console.WriteLine($"\n||||| Numero de tarjeta de embarque: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} |||||");
 Console.WriteLine($"Fecha y hora de emision de la tarjeta de embarque: {dateTime}");
