@@ -53,6 +53,7 @@ Console.ResetColor();
 Console.ReadLine();
 
 // Solicitud de datos inicial
+
 Console.WriteLine("\n¡Hola!\n");
 Console.WriteLine("¿Cual es tu nombre?");
 name = Console.ReadLine();
@@ -75,6 +76,7 @@ Console.WriteLine("\nResponde solo con números");
 flightClass = int.Parse(Console.ReadLine());
 
 //Datos de Equipaje
+
 Console.WriteLine("\nBien!");
 Console.WriteLine("\nOtra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
 baggage = int.Parse(Console.ReadLine());
@@ -86,7 +88,6 @@ if (baggage == 1)
     {
         quantityCarryOnBagaggeOverweight = quantityCarryOnBagagge;
     }
-
 }
 
 Console.WriteLine("\nY . . . Tu equipaje en bodega ya esta facturado? [Si: 1, No: 0]: ");
@@ -125,6 +126,8 @@ if (handLug==0)
 }
 Console.WriteLine("Listo!");
 
+// Perro de Servicio
+
 Console.WriteLine($"\n{name}, viajas con un perro de servicio? [Si: 1, No: 0]");
 dog = int.Parse(Console.ReadLine());
 if (dog == 1)
@@ -143,14 +146,12 @@ if (dog == 1)
     {
         permittedDog = dogAllowed & dogSeatBelt;
     }
-
-
 }
 
 Console.WriteLine("\nAnotado!");
 
+//Servicio de Menor no acompañado
 
-//validacion de edad
 if (age < 18)
 {
     if (age >= 2 && age < 5)
@@ -162,20 +163,19 @@ if (age < 18)
     {
     int servicioMenorNoAcompañado = 0;
 
-    Console.WriteLine("\nTe comento{name}, si quieres viajar solicitando el Servicio de Menor No Acompañado presiona 1, y sino presiona 2");
+    Console.WriteLine($"\nTe comento{name}, si quieres viajar solicitando el Servicio de Menor No Acompañado presiona 1, y sino presiona 0");
     servicioMenorNoAcompañado = int.Parse(Console.ReadLine()); 
     Console.WriteLine("Muy bien!");
     
-    if (servicioMenorNoAcompañado < 2)
+    if (servicioMenorNoAcompañado < 1)
     {
         Console.WriteLine("\nSolo hace falta que me digas el DNI de tu acompañante mayor de edad");
         dniAcompañante = Console.ReadLine();
     }
-
 } 
 }
-
-Console.WriteLine("\n Ya estamos listos! Presiona ENTER para imprimir tu boleto de embarque!");
+//Ticket de embarque
+Console.WriteLine($"\nYa estamos listos {name}! Presiona ENTER para imprimir tu boleto de embarque!");
 Console.ReadLine();
 
 Console.ForegroundColor = ConsoleColor.DarkMagenta;
@@ -218,10 +218,8 @@ else
 {
     Console.WriteLine($"\nAl abordar, le daremos a tu perro un distintivo de servicio y la correa para asegurarlo al cinturon de seguridad");
 }
-
-
 Console.WriteLine($"\n||||| Numero de tarjeta de embarque: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} |||||");
-Console.WriteLine($"Fecha y hora de emision: {dateTime}");
+Console.WriteLine($"\nFecha y hora de emision: {dateTime}");
 Console.WriteLine("\n================================================================");
 Console.WriteLine($"\nFeliz viaje a {dest}, Vuelve pronto {name}!!!");
 Console.WriteLine("\n================================================================");
