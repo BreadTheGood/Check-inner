@@ -71,11 +71,11 @@ dest = Console.ReadLine();
 Console.WriteLine("\nMe gusta {dest}, buena elección!");
 
 Console.WriteLine("Te consulto ¿Vuelas en clase económica: 1, ejecutiva: 2 o Primera Clase: 3?");
-Console.WriteLine("Responde solo con números")
+Console.WriteLine("Responde solo con números");
 flightClass = int.Parse(Console.ReadLine());
 
 //Datos de Equipaje
-Console.WriteLine("Bien!")
+Console.WriteLine("Bien!");
 Console.WriteLine("\n Otra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
 baggage = int.Parse(Console.ReadLine());
 if (baggage == 1)
@@ -86,6 +86,8 @@ if (baggage == 1)
     {
         quantityCarryOnBagaggeOverweight = quantityCarryOnBagagge;
     }
+
+}
 
 Console.WriteLine("\nY . . . Tu equipaje en bodega ya esta facturado? [Si: 1, No: 0]: ");
 Console.WriteLine("Recuerda responder con números!")
@@ -218,11 +220,6 @@ Console.WriteLine("\n===========================================================
 Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
 Console.WriteLine("\n////////////////////////////////////////////////////////////////");
-
-
-
-
-Console.ResetColor();
 
 
 
