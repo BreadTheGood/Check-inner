@@ -1,5 +1,5 @@
 ﻿
-// declaracion de variables
+// declaracion de variables iniciales
 string name;
 string dni;
 string dniAcompañante;
@@ -21,6 +21,7 @@ int permittedDog = 0;
 int dogAllowed;
 int dogSeatBelt;
 
+//Generacion Random y DateTime
 Random rnd = new Random();
 int num1 = rnd.Next(1, 9);
 int num2 = rnd.Next(1, 9);
@@ -31,19 +32,15 @@ int num5 = rnd.Next(1, 9);
 char letra1 = (char)rnd.Next('A', 'Z' + 1);
 char letra2 = (char)rnd.Next('A', 'Z' + 1);
 
-
 DateTime dateTime = DateTime.Now;
-
-
 
 // Mensaje de bienvenida
 Console.WriteLine("\r\n████████████████████████████████████████████████████████████\r\n█▄─▄─▀█▄─▄█▄─▄▄─█▄─▀█▄─▄█▄─█─▄█▄─▄▄─█▄─▀█▄─▄█▄─▄█▄─▄▄▀█─▄▄─█\r\n██─▄─▀██─███─▄█▀██─█▄▀─███▄▀▄███─▄█▀██─█▄▀─███─███─██─█─██─█\r\n▀▄▄▄▄▀▀▄▄▄▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀▀▀▄▀▀▀▄▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▀▄▄▄▄▀▀▄▄▄▄▀");
 Console.WriteLine("\r\n███████\r\n██▀▄─██\r\n██─▀─██\r\n▀▄▄▀▄▄▀");
 Console.WriteLine("\r\n████████████████████████████████████████████████████████████████████████\r\n█─▄▄▄─█─█─█▄─▄▄─█─▄▄▄─█▄─█─▄███▀▀▀▀▀████▄─▄█▄─▀█▄─▄█▄─▀█▄─▄█▄─▄▄─█▄─▄▄▀█\r\n█─███▀█─▄─██─▄█▀█─███▀██─▄▀██████████████─███─█▄▀─███─█▄▀─███─▄█▀██─▄─▄█\r\n▀▄▄▄▄▄▀▄▀▄▀▄▄▄▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▀▀▀▀▀▀▀▀▀▀▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀");
-Console.WriteLine("");
-Console.WriteLine("");
+
 Console.ForegroundColor = ConsoleColor.Blue;
-Console.WriteLine("////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+Console.WriteLine("\n\n////////////////////////////////////////////////////////////////////////////////////////////////////////////");
 
 Console.ForegroundColor = ConsoleColor.Yellow;
 
@@ -56,10 +53,9 @@ Console.ResetColor();
 Console.ReadLine();
 
 // Solicitud de datos inicial
-Console.WriteLine("¡Hola!\n");
+Console.WriteLine("\n¡Hola!\n");
 Console.WriteLine("¿Cual es tu nombre?");
 name = Console.ReadLine();
-
 
 Console.WriteLine($"\nPerfecto! {name}");
 Console.WriteLine("¿Cual es tu DNI?");
@@ -69,21 +65,63 @@ Console.WriteLine("\nMuy bien!");
 Console.WriteLine("¿Cuantos años tienes?");
 age = int.Parse(Console.ReadLine());
 
-Console.WriteLine("\nEstupendo!");
-Console.WriteLine("¿Cual va a ser su destino?");
+Console.WriteLine($"Okey, {name}");
+Console.WriteLine("¿A que ciudad viajas?");
 dest = Console.ReadLine();
+Console.WriteLine("\nMe gusta {dest}, buena elección!");
 
-Console.WriteLine("\nExcelente!");
-Console.WriteLine("Ingrese la clase de vuelo en formato numerico, [Económica: 1, Ejecutiva: 2, Primera Clase: 3]");
+Console.WriteLine("Te consulto ¿Vuelas en clase económica: 1, ejecutiva: 2 o Primera Clase: 3?");
+Console.WriteLine("Responde solo con números")
 flightClass = int.Parse(Console.ReadLine());
 
-Console.WriteLine("\nPosee equipaje de mano? [Si: 1, No: 0]: ");
+//Datos de Equipaje
+Console.WriteLine("Bien!")
+Console.WriteLine("\n Otra consulta ¿Llevas equipaje de mano? [Si: 1, No: 0]: ");
 baggage = int.Parse(Console.ReadLine());
+if (baggage == 1)
+{
+    Console.WriteLine("¿Cuanto equipaje de mano llevas?");
+    quantityCarryOnBagagge = int.Parse(Console.ReadLine());
+    if (quantityCarryOnBagagge > 3)
+    {
+        quantityCarryOnBagaggeOverweight = quantityCarryOnBagagge;
+    }
 
-Console.WriteLine("\nPosee el equipaje en bodega facturado? [Si: 1, No: 0]: ");
+Console.WriteLine("\nY . . . Tu equipaje en bodega ya esta facturado? [Si: 1, No: 0]: ");
+Console.WriteLine("Recuerda responder con números!")
 handLug = int.Parse(Console.ReadLine());
+                
+if (handLug==0)
+{    
+    Console.WriteLine("¿Cuanto pesa de tu equipaje?");
+    switch (flightClass){
+        case 1:             
+            weightHandLug = int.Parse(Console.ReadLine());
+            if (weightHandLug > 5){
+                handLugOverweight = weightHandLug;
+            }
+            break;
 
-Console.WriteLine("\nViaja con un perro de servicio? [Si: 1, No: 0]");
+        case 2:
+            weightHandLug = int.Parse(Console.ReadLine());
+            if (weightHandLug > 10){
+                handLugOverweight = weightHandLug;
+            }
+            break;
+
+        case 3:
+            weightHandLug = int.Parse(Console.ReadLine());
+            if (weightHandLug > 20){
+                handLugOverweight = weightHandLug;
+            }
+            break;         
+        
+        default: 
+            break;
+        }
+}
+
+Console.WriteLine("\nViajas con un perro de servicio? [Si: 1, No: 0]");
 dog = int.Parse(Console.ReadLine());
 
 
@@ -95,92 +133,27 @@ if (age < 18)
         Console.WriteLine("La persona debera viajar obligatoriamente acompañado por sus padres o tutor en la misma cabina y en asiento contiguos");
         Console.WriteLine("Por favor ingresa el DNI de tu acompañante mayor de edad");
         dniAcompañante = Console.ReadLine();
-    }
-}
-else if (age >= 5 && age <= 11)
-{
+    }else if (age >= 5 && age <= 11)
+    {
     int servicioMenorNoAcompañado = 0;
 
-    Console.WriteLine("La persona podra viajar solo al momento del inicio del viaje, solocitando el Servicio de Menor No Acompañado");
+    Console.WriteLine("La persona podra viajar solo al momento del inicio del viaje, solicitando el Servicio de Menor No Acompañado");
     Console.WriteLine("¿Deseas solicitar el servicio de menor no acompañado?");
-    Console.WriteLine("Ingresa 1:Si o 2:No");
+    Console.WriteLine("Responde con números! Si:1, No:2");
+    servicioMenorNoAcompañado = int.Parse(Console.ReadLine()); 
     Console.WriteLine("Muy bien!");
-    servicioMenorNoAcompañado = int.Parse(Console.ReadLine());
+    
     if (servicioMenorNoAcompañado < 2)
     {
         Console.WriteLine("Por favor ingresa el DNI de tu acompañante mayor de edad");
         dniAcompañante = Console.ReadLine();
     }
 
-}
-
-//equipaje
-
-// mensaje de equipaje va en el ticket final
-if (baggage == 1)
-{
-    Console.Write("\n\n\nUsted posee equipaje de mano, ");
-    Console.WriteLine("Ingrese cuanto equipaje de mano que va a llevar");
-    quantityCarryOnBagagge = int.Parse(Console.ReadLine());
-    if (quantityCarryOnBagagge > 3)
-    {
-        quantityCarryOnBagaggeOverweight = quantityCarryOnBagagge;
-    }
-    else
-    {
-        Console.WriteLine("\n\n\nPerfecto! Usted no excede la cantidad de equipaje permitido.");
-    }
-}
-
-//equipaje facturado
-
-
-if (handLug == 0)
-{
-
-    if (flightClass == 1)
-    {
-
-        Console.Write("\n\n\nNo posee equipaje facturado, ");
-        Console.WriteLine("Ingrese el peso de su equipaje");
-        weightHandLug = int.Parse(Console.ReadLine());
-
-        if (weightHandLug > 5)
-        {
-            handLugOverweight = weightHandLug;
-        }
-
-    }
-    else if (flightClass == 2)
-    {
-
-        Console.Write("\n\n\nNo posee equipaje facturado, ");
-        Console.WriteLine("Ingrese el peso de su equipaje");
-        weightHandLug = int.Parse(Console.ReadLine());
-        if (weightHandLug > 10)
-        {
-            handLugOverweight = weightHandLug;
-        }
-
-    }
-    else
-    {
-
-        Console.Write("\n\n\nNo posee equipaje facturado, ");
-        Console.WriteLine("Ingrese el peso de su equipaje");
-        weightHandLug = int.Parse(Console.ReadLine());
-        if (weightHandLug > 20)
-        {
-            handLugOverweight = weightHandLug;
-        }
-
-    }
-
+} 
 }
 
 if (dog == 1)
 {
-
     Console.WriteLine("\n\n\nEl perro con el que viaja esta debidamente identificado con su chaleco o distintivo de servicio? [Si: 1, No: 0]:");
     dogAllowed = int.Parse(Console.ReadLine());
     Console.WriteLine("\nEl perro cuenta con un accesorio o correa para asegurarlo al cinturón de seguridad? [Si: 1, No: 0]:");
@@ -224,11 +197,11 @@ Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso 
 
 if (permittedDog == 1)
 {
-    Console.WriteLine($"\nPerro de acompañamiento: {permittedDog}, perro permitido para abordar con el pasajero, {name}");
+    Console.WriteLine($"\nPerro de acompañamiento: Si, perro permitido para abordar con el pasajero.");
 }
 else if (dog == 0)
 {
-    Console.WriteLine("\nUsted viaja sin perro de acompañamiento");
+    Console.WriteLine("\nSin perro de acompañamiento");
 }
 else
 {
@@ -237,10 +210,10 @@ else
 
 
 Console.WriteLine($"\n||||| Numero de tarjeta de embarque: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} |||||");
-Console.WriteLine($"Fecha y hora de emision de la tarjeta de embarque: {dateTime}");
+Console.WriteLine($"Fecha y hora de emision: {dateTime}");
 Console.WriteLine("\n================================================================");
-Console.WriteLine($"Feliz viaje a {dest}, Vuelve pronto {name}!!!");
-Console.WriteLine("================================================================");
+Console.WriteLine($"\nFeliz viaje a {dest}, Vuelve pronto {name}!!!");
+Console.WriteLine("\n================================================================");
 
 Console.ForegroundColor = ConsoleColor.DarkMagenta;
 
