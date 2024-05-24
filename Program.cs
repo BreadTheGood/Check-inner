@@ -125,7 +125,7 @@ if (handLug==0)
 }
 Console.WriteLine("Listo!");
 
-Console.WriteLine("\n{name}, viajas con un perro de servicio? [Si: 1, No: 0]");
+Console.WriteLine($"\n{name}, viajas con un perro de servicio? [Si: 1, No: 0]");
 dog = int.Parse(Console.ReadLine());
 if (dog == 1)
 {
@@ -199,7 +199,7 @@ else
     Console.WriteLine($"\nDestino : {dest} | Clase: Primera Clase");
 }
 
-Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg );
+Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg");
                   
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine($"Excedente a pagar por equipaje en bodega: {(weightHandLug * 10)}");
@@ -208,7 +208,7 @@ Console.ForegroundColor = ConsoleColor.Cyan;
 
 if (permittedDog == 1)
 {
-    Console.WriteLine($"\nPerro de acompañamiento: Si, perro permitido para abordar con el pasajero.");
+    Console.WriteLine($"\nPerro de acompañamiento identificado y con accesorio de seguridad.");
 }
 else if (dog == 0)
 {
