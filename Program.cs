@@ -184,7 +184,7 @@ Console.WriteLine("\n///////////////////////////////////////////////////////////
 
 Console.ForegroundColor = ConsoleColor.Cyan;
 
-Console.WriteLine($"\nPasajero: {name} | DNI: {dni} | Edad: {age}");
+Console.WriteLine($"\nPasajero: {name} | DNI: {dni} | Edad: {age} años");
 
 if (flightClass == 1)
 {
@@ -218,8 +218,8 @@ else
 {
     Console.WriteLine($"\nAl abordar, le daremos a tu perro un distintivo de servicio y la correa para asegurarlo al cinturon de seguridad");
 }
-Console.WriteLine($"\n||||| Numero de tarjeta de embarque: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} |||||");
-Console.WriteLine($"\nFecha y hora de emision: {dateTime}");
+Console.WriteLine($"\n|||||||||| Numero de tarjeta de embarque: {letra1}{letra2}{num1}{num2}{num3}{num4}{num5} ||||||||||");
+Console.WriteLine($"\n||||||||||                    Fecha y hora de emision: {dateTime}                        ||||||||||");
 Console.WriteLine("\n================================================================");
 Console.WriteLine($"\nFeliz viaje a {dest}, Vuelve pronto {name}!!!");
 Console.WriteLine("\n================================================================");
