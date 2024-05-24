@@ -155,7 +155,7 @@ if (age < 18)
 {
     if (age >= 2 && age < 5)
     {
-        Console.WriteLine("\nTe comento {name}, debes viajar obligatoriamente acompañado por tus padres o tutor en la misma cabina y en asiento contiguos");
+        Console.WriteLine($"\nTe comento {name}, debes viajar obligatoriamente acompañado por tus padres o tutor en la misma cabina y en asiento contiguos");
         Console.WriteLine("\nSolo hace falta que me digas el DNI de tu acompañante mayor de edad");
         dniAcompañante = Console.ReadLine();
     }else if (age >= 5 && age <= 11)
@@ -188,18 +188,18 @@ Console.WriteLine($"\nPasajero: {name} | DNI: {dni} | Edad: {age}");
 
 if (flightClass == 1)
 {
-    Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass} = [Económica]");
+    Console.WriteLine($"\nDestino : {dest} | Clase: Económica");
 }
 else if (flightClass == 2)
 {
-    Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass} = [Ejecutiva]");
+    Console.WriteLine($"\nDestino : {dest} | Clase: Ejecutiva");
 }
 else
 {
-    Console.WriteLine($"\nDestino : {dest} | Clase: {flightClass} = [Primera Clase]");
+    Console.WriteLine($"\nDestino : {dest} | Clase: Primera Clase");
 }
 
-Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg )
+Console.WriteLine($"\nEquipaje de mano: {quantityCarryOnBagagge} maletas | Peso de equipaje en bodega: {weightHandLug}kg );
                   
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine($"Excedente a pagar por equipaje en bodega: {(weightHandLug * 10)}");
@@ -216,7 +216,7 @@ else if (dog == 0)
 }
 else
 {
-    Console.WriteLine($"\n Al abordar, le daremos a tu perro un distintivo de servicio y la correa para asegurarlo al cinturon de seguridad");
+    Console.WriteLine($"\nAl abordar, le daremos a tu perro un distintivo de servicio y la correa para asegurarlo al cinturon de seguridad");
 }
 
 
